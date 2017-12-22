@@ -46,7 +46,7 @@ class BDButton: SKNode {
     button.zPosition = 0
     
     if let titleLabel = titleLabel {
-      titleLabel.fontName = "BubbleGum"
+      titleLabel.fontName = "GlutenFT-Regular"
       titleLabel.fontSize = CGFloat.universalFont(size: 24)
       titleLabel.fontColor = SKColor.white
       titleLabel.zPosition = 1

@@ -37,7 +37,7 @@ class MainMenu: SKScene {
       
       let chance = CGFloat.random(1, max: 10)
       if chance <= 5 {
-        //self.showAds()
+        self.showAds()
       } else {
         self.startGameplay()
       }
@@ -51,7 +51,16 @@ class MainMenu: SKScene {
   lazy var rateButton: BDButton = {
     var button = BDButton(imageNamed: "ButtonRate", buttonAction: {
       
-      
+      if let url = URL(string: "https://itunes.apple.com/app/id\(AppId)?action=write-review/") {
+        UIApplication.shared.open(url, options: [:], completionHandler: { (result) in
+          if result {
+            print("Success")
+          } else {
+            print("Failed")
+          }
+        })
+        
+      }
       
     })
     button.scaleTo(screenWithPercentage: 0.27)
@@ -62,7 +71,7 @@ class MainMenu: SKScene {
   lazy var shareButton: BDButton = {
     var button = BDButton(imageNamed: "ButtonShare", buttonAction: {
       
-      
+      ACTManager.shared.share(on: self, text: "I just love this new game. Go ahead and download 'The Biggest Donut' from the App Store", image: UIImage(named: "Donut92"), exculdeActivityTypes: [])
       
     })
     button.scaleTo(screenWithPercentage: 0.27)
@@ -74,6 +83,8 @@ class MainMenu: SKScene {
     anchorPoint = CGPoint(x: 0.5, y: 0.5)
     setupNodes()
     addNodes()
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(self.startGameplayNotification(_:)), name: startGameplayNotificationName, object: nil)
   }
   
   func setupNodes() {
@@ -100,6 +111,20 @@ class MainMenu: SKScene {
   func startGameplay() {
     ACTManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .right, duration: 0.5))
     
+  }
+  
+  func showAds() {
+    if !ACTPlayerStats.shared.getNoAds() {
+      if !Chartboost.hasInterstitial(CBLocationMainMenu) {
+        Chartboost.cacheInterstitial(CBLocationMainMenu)
+        startGameplay()
+      } else {
+        Chartboost.showInterstitial(CBLocationMainMenu)
+        Chartboost.cacheInterstitial(CBLocationMainMenu)
+      }
+    } else {
+      startGameplay()
+    }
   }
   
 }

@@ -9,6 +9,10 @@
 import Foundation
 import SpriteKit
 
+let AppId = "123456"
+let chartboostAppID = "5a3cfaf8e6d7050d5c5c6dce"
+let chartboostAppSignature = "97a43ed515d78826130881e8c0eed747185d0d74"
+
 class ACTManager {
   
   enum SceneType {

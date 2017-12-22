@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		C968FE731FEC3A33000FDCA3 /* GlutenFT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C968FE721FEC3A33000FDCA3 /* GlutenFT-Regular.otf */; };
 		C96FCE531FEC61A90050C424 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96FCE521FEC61A90050C424 /* GameOver.swift */; };
+		C96FCE551FED32E50050C424 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE541FED32E40050C424 /* Chartboost.framework */; };
+		C96FCE581FED33000050C424 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE571FED33000050C424 /* StoreKit.framework */; };
+		C96FCE5A1FED330A0050C424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE591FED330A0050C424 /* Foundation.framework */; };
+		C96FCE5C1FED33150050C424 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE5B1FED33150050C424 /* CoreGraphics.framework */; };
+		C96FCE5E1FED331F0050C424 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE5D1FED331F0050C424 /* WebKit.framework */; };
+		C96FCE601FED332C0050C424 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE5F1FED332C0050C424 /* UIKit.framework */; };
+		C96FCE641FED355A0050C424 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C96FCE621FED355A0050C424 /* BackgroundMusic.mp3 */; };
+		C96FCE651FED355A0050C424 /* Tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C96FCE631FED355A0050C424 /* Tap.wav */; };
 		C9FBC2331FEC31E6002EE4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBC2321FEC31E6002EE4F1 /* AppDelegate.swift */; };
 		C9FBC23B1FEC31E6002EE4F1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBC23A1FEC31E6002EE4F1 /* GameViewController.swift */; };
 		C9FBC2401FEC31E6002EE4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FBC23F1FEC31E6002EE4F1 /* Assets.xcassets */; };
@@ -24,6 +32,15 @@
 /* Begin PBXFileReference section */
 		C968FE721FEC3A33000FDCA3 /* GlutenFT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlutenFT-Regular.otf"; sourceTree = "<group>"; };
 		C96FCE521FEC61A90050C424 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		C96FCE541FED32E40050C424 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		C96FCE571FED33000050C424 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C96FCE591FED330A0050C424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C96FCE5B1FED33150050C424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C96FCE5D1FED331F0050C424 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C96FCE5F1FED332C0050C424 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C96FCE611FED339D0050C424 /* Rebeloper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebeloper-Bridging-Header.h"; sourceTree = "<group>"; };
+		C96FCE621FED355A0050C424 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
+		C96FCE631FED355A0050C424 /* Tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tap.wav; sourceTree = "<group>"; };
 		C9FBC22F1FEC31E6002EE4F1 /* ACTGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACTGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FBC2321FEC31E6002EE4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FBC23A1FEC31E6002EE4F1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -43,17 +60,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96FCE601FED332C0050C424 /* UIKit.framework in Frameworks */,
+				C96FCE5E1FED331F0050C424 /* WebKit.framework in Frameworks */,
+				C96FCE5C1FED33150050C424 /* CoreGraphics.framework in Frameworks */,
+				C96FCE5A1FED330A0050C424 /* Foundation.framework in Frameworks */,
+				C96FCE581FED33000050C424 /* StoreKit.framework in Frameworks */,
+				C96FCE551FED32E50050C424 /* Chartboost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C96FCE561FED33000050C424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C96FCE5F1FED332C0050C424 /* UIKit.framework */,
+				C96FCE5D1FED331F0050C424 /* WebKit.framework */,
+				C96FCE5B1FED33150050C424 /* CoreGraphics.framework */,
+				C96FCE591FED330A0050C424 /* Foundation.framework */,
+				C96FCE571FED33000050C424 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9FBC2261FEC31E6002EE4F1 = {
 			isa = PBXGroup;
 			children = (
 				C9FBC2311FEC31E6002EE4F1 /* ACTGame */,
 				C9FBC2301FEC31E6002EE4F1 /* Products */,
+				C96FCE561FED33000050C424 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,12 +104,15 @@
 		C9FBC2311FEC31E6002EE4F1 /* ACTGame */ = {
 			isa = PBXGroup;
 			children = (
+				C96FCE541FED32E40050C424 /* Chartboost.framework */,
 				C9FBC2321FEC31E6002EE4F1 /* AppDelegate.swift */,
 				C9FBC23A1FEC31E6002EE4F1 /* GameViewController.swift */,
 				C9FBC23F1FEC31E6002EE4F1 /* Assets.xcassets */,
 				C9FBC2411FEC31E6002EE4F1 /* LaunchScreen.storyboard */,
 				C9FBC2441FEC31E6002EE4F1 /* Info.plist */,
 				C968FE721FEC3A33000FDCA3 /* GlutenFT-Regular.otf */,
+				C96FCE621FED355A0050C424 /* BackgroundMusic.mp3 */,
+				C96FCE631FED355A0050C424 /* Tap.wav */,
 				C9FBC24A1FEC32DC002EE4F1 /* MainMenu.swift */,
 				C9FBC24C1FEC337A002EE4F1 /* BDButton.swift */,
 				C9FBC24E1FEC3399002EE4F1 /* Extension.swift */,
@@ -81,6 +120,7 @@
 				C9FBC2521FEC344A002EE4F1 /* ACTPlayerStats.swift */,
 				C9FBC2541FEC3482002EE4F1 /* Gameplay.swift */,
 				C96FCE521FEC61A90050C424 /* GameOver.swift */,
+				C96FCE611FED339D0050C424 /* Rebeloper-Bridging-Header.h */,
 			);
 			path = ACTGame;
 			sourceTree = "<group>";
@@ -146,6 +186,8 @@
 			files = (
 				C9FBC2401FEC31E6002EE4F1 /* Assets.xcassets in Resources */,
 				C968FE731FEC3A33000FDCA3 /* GlutenFT-Regular.otf in Resources */,
+				C96FCE651FED355A0050C424 /* Tap.wav in Resources */,
+				C96FCE641FED355A0050C424 /* BackgroundMusic.mp3 in Resources */,
 				C9FBC2431FEC31E6002EE4F1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,10 +338,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ACTGame",
+				);
 				INFOPLIST_FILE = ACTGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rebeloper.ACTGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rebeloper/Desktop/YouTubeAdventCalendar/ACTGame/ACTGame/Rebeloper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -311,10 +358,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ACTGame",
+				);
 				INFOPLIST_FILE = ACTGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rebeloper.ACTGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rebeloper/Desktop/YouTubeAdventCalendar/ACTGame/ACTGame/Rebeloper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ChartboostDelegate {
 
   var window: UIWindow?
 
@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let gameViewController = GameViewController()
     window?.rootViewController = gameViewController
+    
+    setupChartboost()
     
     return true
   }
@@ -47,7 +49,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
+  
+  func setupChartboost() {
+    Chartboost.start(withAppId: chartboostAppID, appSignature: chartboostAppSignature, delegate: self)
+    Chartboost.cacheInterstitial(CBLocationMainMenu)
+  }
+  
+  func shouldDisplayInterstitial(_ location: String!) -> Bool {
+    NotificationCenter.default.post(name: stopBackgroundMusicNotificationName, object: nil, userInfo: nil)
+    return true
+  }
+  
+  func didDismissInterstitial(_ location: String!) {
+    NotificationCenter.default.post(name: startBackgroundMusicNotificationName, object: nil, userInfo: nil)
+    NotificationCenter.default.post(name: startGameplayNotificationName, object: nil, userInfo: nil)
+  }
+  
+  func didCloseInterstitial(_ location: String!) {
+    NotificationCenter.default.post(name: startBackgroundMusicNotificationName, object: nil, userInfo: nil)
+    NotificationCenter.default.post(name: startGameplayNotificationName, object: nil, userInfo: nil)
+  }
+  
+  func didClickInterstitial(_ location: String!) {
+    NotificationCenter.default.post(name: startBackgroundMusicNotificationName, object: nil, userInfo: nil)
+  }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 

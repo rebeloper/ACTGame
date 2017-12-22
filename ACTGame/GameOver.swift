@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import StoreKit
 
 class GameOver: SKScene {
   
@@ -75,6 +76,7 @@ class GameOver: SKScene {
   }()
   
   override func didMove(to view: SKView) {
+    SKStoreReviewController.requestReview()
     anchorPoint = CGPoint(x: 0.5, y: 0.5)
     setupNodes()
     addNodes()

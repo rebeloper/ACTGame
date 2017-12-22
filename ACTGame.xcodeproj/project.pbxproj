@@ -10,7 +10,6 @@
 		C968FE731FEC3A33000FDCA3 /* GlutenFT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C968FE721FEC3A33000FDCA3 /* GlutenFT-Regular.otf */; };
 		C96FCE531FEC61A90050C424 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96FCE521FEC61A90050C424 /* GameOver.swift */; };
 		C96FCE551FED32E50050C424 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE541FED32E40050C424 /* Chartboost.framework */; };
-		C96FCE581FED33000050C424 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE571FED33000050C424 /* StoreKit.framework */; };
 		C96FCE5A1FED330A0050C424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE591FED330A0050C424 /* Foundation.framework */; };
 		C96FCE5C1FED33150050C424 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE5B1FED33150050C424 /* CoreGraphics.framework */; };
 		C96FCE5E1FED331F0050C424 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FCE5D1FED331F0050C424 /* WebKit.framework */; };
@@ -33,7 +32,6 @@
 		C968FE721FEC3A33000FDCA3 /* GlutenFT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlutenFT-Regular.otf"; sourceTree = "<group>"; };
 		C96FCE521FEC61A90050C424 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		C96FCE541FED32E40050C424 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
-		C96FCE571FED33000050C424 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C96FCE591FED330A0050C424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C96FCE5B1FED33150050C424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C96FCE5D1FED331F0050C424 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -64,7 +62,6 @@
 				C96FCE5E1FED331F0050C424 /* WebKit.framework in Frameworks */,
 				C96FCE5C1FED33150050C424 /* CoreGraphics.framework in Frameworks */,
 				C96FCE5A1FED330A0050C424 /* Foundation.framework in Frameworks */,
-				C96FCE581FED33000050C424 /* StoreKit.framework in Frameworks */,
 				C96FCE551FED32E50050C424 /* Chartboost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,7 +76,6 @@
 				C96FCE5D1FED331F0050C424 /* WebKit.framework */,
 				C96FCE5B1FED33150050C424 /* CoreGraphics.framework */,
 				C96FCE591FED330A0050C424 /* Foundation.framework */,
-				C96FCE571FED33000050C424 /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +154,11 @@
 					C9FBC22E1FEC31E6002EE4F1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

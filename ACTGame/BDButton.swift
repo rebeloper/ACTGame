@@ -104,7 +104,7 @@ class BDButton: SKNode {
   func disable() {
     isEnabled = false
     mask.alpha = 0.0
-    button.alpha = 0.5
+    button.alpha = 1.0
   }
   
   func enable() {

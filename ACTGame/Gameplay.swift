@@ -56,7 +56,7 @@ class Gameplay: SKScene {
   }
   
   func addNewDonuts() {
-    for _ in 1...30 {
+    for i in 1...30 {
       
       let imageNamed = "Donut\(Int(CGFloat.random(1.0, max: 96.0)))"
       
@@ -66,7 +66,7 @@ class Gameplay: SKScene {
       }
       donut.name = "donut"
       donut.scaleTo(screenWithPercentage: CGFloat.random(0.48, max: 0.5))
-      donut.zPosition = 1
+      donut.zPosition = CGFloat(i)
       donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
       addChild(donut)
       donut.button.popUp(after: CGFloat.random(0.1, max: 1.0), sequenceNumber: 0)
@@ -77,9 +77,9 @@ class Gameplay: SKScene {
       print("Winner Donut tapped")
       self.handleWinnerDonutTapped()
     }
-    winnerDonut.scaleTo(screenWithPercentage: 0.52)
+    winnerDonut.scaleTo(screenWithPercentage: 0.51)
     winnerDonut.name = "donut"
-    winnerDonut.zPosition = 2
+    winnerDonut.zPosition = CGFloat(31)
     winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
     addChild(winnerDonut)
     winnerDonut.button.popUp()
